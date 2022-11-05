@@ -1,9 +1,15 @@
 from datetime import datetime as dt
-from app import db
+from app import db, login_manager
+from flask_login import UserMixin
+
+#Function that loads user
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 
 #Beginning of Database Controls
 #Creates user Table (class)
-class User(db.Model):
+class User(db.Model, UserMixin):
     #Create tablename, may need to delete
     __tablename__ = "user"
     id = db.Column(db.Integer, primary_key = True)
@@ -19,7 +25,7 @@ class Trackinsight(db.Model):
     user_email = db.Column(db.String(120),db.ForeignKey('user.email'), nullable = False)
     date_posted = db.Column(db.DateTime, nullable = False, default = dt.utcnow)
     track_content = db.Column(db.Text, nullable = False)
+    #title = db.Column(db.Text, nullable = False)
 
     #need defs
-
 ##END OF DATABASE CONTROLS

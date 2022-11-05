@@ -1,46 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!--BEGINNING OF NAV-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="{{ url_for('static', filename='icon.svg') }}" width="60", height="45">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!--BEGINNING OF NAV BUTTONS AND LINKS-->
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="{{ url_for('home_page') }}">Home</a>
-            <!-- Register + Login -->
-            <a class="nav-link active" aria-current="page" href="{{ url_for('about_page') }}">About</a>
-            
-            <a class="nav-link active" aria-current="page" href="{{ url_for('login_page') }}">Login</a>
 
-            <a class="nav-link active" aria-current="page" href="{{ url_for('register_page') }}">Register</a>
-
-            <a class="nav-link active" aria-current="page" href="">Authenticate Spotify</a>
-            </div>
-        </div>
-        <!--END OF NAV BUTTONS AND LINKS-->
-    </div>
-</nav>
-<!--END OF NAV-->
 <br>
 <br>
 
 <div class="container">
     <div class="row justify-content-center">
-        <h1 class="w-75" style="text-align: center;">Sign into your account</h1>
+        <h1 class="w-75" style="text-align: center;">Mission Statement</h1>
         <br>
 
         <br>
 
         <p class="w-75">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua.
+            Our mission is to help provide users with personalized listening insights in order to help you learn about the music you already love. 
         </p>
 
         <p class="w-75">
@@ -48,9 +21,7 @@
         </p>
 
         <p class="w-75">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. These are now just sample words 
-                  that will soon be filled with precious information.
+            As an avid music listener, our developer wanted to spread Spotify's music insights to everyone who wants to see them.
         </p>
 
         <p class="w-75">

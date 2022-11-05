@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,8 +22,48 @@
     <title>Spotify InSITE</title>
   </head>
   <body>
+    <!--BEGINNING OF NAV -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='icon.svg') }}" width="60", height="45">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       <!-- BEGINNING OF NAV BUTTONS AND LINKS-->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('home_page') }}">Home</a>
+            <!--Register + Login-->
+            <a class="nav-link active" aria-current="page" href="{{ url_for('about_page') }}">About</a>
+            </div>
+            <div class ="navbar-nav">
+              {% if current_user.is_authenticated %}
+                <a class="nav-link active" aria-current="page" href="{{ url_for('logout_page') }}">Logout</a>
+
+                <a class="nav-link active" aria-current="page" href="{{ url_for('authenticate_page') }}">Authenticate Spotify</a>
+
+                <a class="nav-link active" aria-current="page" href="{{ url_for('track_page') }}">Manage Tracks</a>
+
+                <a class="nav-link active" aria-current="page" href="{{ url_for('tpost_page') }}">Track Post</a>
+            </div>
+              {% else %}
+            <div class ="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('login_page') }}">Login</a>
+
+                <a class="nav-link active" aria-current="page" href="{{ url_for('register_page') }}">Register</a>
+                
+              {% endif %}
+            </div>
+        </div>
+        <!--END OF NAV BUTTONS AND LINKS-->
+    </div>
+</nav>
+<!--END OF NAV-->
+
     <div>
-      
+    
       <!--Allows flash messages-->
       {% with messages = get_flashed_messages(with_categories = true) %}
         {% if messages %}
@@ -39,7 +77,7 @@
   <!--End of flash messages-->
 
       {% block content %}
-
+             
       {% endblock %}
     </div>
     <!-- Optional JavaScript; choose one of the two! -->

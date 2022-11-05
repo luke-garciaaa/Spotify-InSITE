@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br>
+<br>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h1 class="w-75" style="text-align: center;">About Your Insights</h1>
+        
+
+        <p class="w-75">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <br>
+        
+        
+    </div>
+    <button type="button" class="btn btn-secondary" style = "float:right;">Add Track Insight</button>
+    <br>
+    <br>
+
+    <div class="row justify-content-center">
+        <h1 class="w-75" style="text-align: center;">Current Tracks</h1>
+        <br>
+
+        <br>
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Most Popular Genre</th>
+                <th scope="col">Most Popular Song</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Indie</td>
+                <td>Sense</td>
+                <td>9-28-2022</td>
+                <td><a href="#" class="link-dark">Edit</a></td>
+                <td><a href="#" class="link-dark">Delete</a></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Rock</td>
+                <td>Complicated</td>
+                <td>9-30-2022</td>
+                <td><a href="#" class="link-dark">Edit</a></td>
+                <td><a href="#" class="link-dark">Delete</a></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Phonk</td>
+                <td>Love Bound</td>
+                <td>10-1-2022</td>
+                <td><a href="#" class="link-dark">Edit</a></td>
+                <td><a href="#" class="link-dark">Delete</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+        
+        
+   
+
+    <br>
+    <br>
+
+   
+</div>
+
+<!--FOOTER-->
+
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: black">
+      <div class = "nav-link-active">
+      <a class="text-light" href="https://mdbootstrap.com/">Manage Playlist Insights</a>  
+      <a class="text-light" href="https://mdbootstrap.com/">Manage Song Insights</a>
+      
+      </div>
+    </div>
+    <!-- Copyright -->
+  </footer>
+{% endblock %}

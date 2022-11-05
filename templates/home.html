@@ -1,33 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!--BEGINNING OF NAV-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="{{ url_for('static', filename='icon.svg') }}" width="60", height="45">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!--BEGINNING OF NAV BUTTONS AND LINKS-->
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                <!-- Register + Login -->
-                <a class="nav-link active" aria-current="page" href="{{ url_for('about_page') }}">About</a>
-                
-                <a class="nav-link active" aria-current="page" href="{{ url_for('login_page') }}">Login</a>
+<!--BEGINNING OF NAV
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='icon.svg') }}" width="60", height="45">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        BEGINNING OF NAV BUTTONS AND LINKS
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('home_page') }}">Home</a>
+            Register + Login 
+            <a class="nav-link active" aria-current="page" href="{{ url_for('about_page') }}">About</a>
+            
+            <a class="nav-link active" aria-current="page" href="{{ url_for('login_page') }}">Login</a>
 
-                <a class="nav-link active" aria-current="page" href="{{ url_for('register_page') }}">Register</a>
+            <a class="nav-link active" aria-current="page" href="{{ url_for('register_page') }}">Register</a>
 
-                <a class="nav-link active" aria-current="page" href="">Authenticate Spotify</a>
-                </div>
+            <a class="nav-link active" aria-current="page" href="">Authenticate Spotify</a>
             </div>
-            <!--END OF NAV BUTTONS AND LINKS-->
         </div>
-    </nav>
-<!--END OF NAV-->
+        END OF NAV BUTTONS AND LINKS
+    </div>
+</nav>
+END OF NAV-->
     <br>
     <br>
 
@@ -68,14 +68,6 @@
         <div class="row justify-content-center">
 
             <div class="col text-center">
-                <h2>Playlist Insights</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua.</i></b>
-                </p>
-            </div>
-
-            <div class="col text-center">
                 <h2>Track Insights</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -84,7 +76,7 @@
             </div>
                
             <div class="col text-center">
-                <h2>Genre Insights</h2>
+                <h2>Playlist Insights</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. <a href="{{auth_url_2_0}}">here</a>.
