@@ -39,8 +39,8 @@ def create_spotify_oauth():
     return SpotifyOAuth(
         #client_id = os.environ.get("SPOTIPY_CLIENT_ID"),
         #client_secret = os.environ.get("SPOTIPY_CLIENT_SECRET"),
-        client_id = 'ba112b111926424ebe76312e1c82187e',
-        client_secret = 'c603209cb1cb4cb49bfcac2fd557e159',
+        client_id = 'CLIENT_ID',
+        client_secret = 'CLIENT_SECRET',
         ### YES YES IT WORK OMG 
         redirect_uri = 'http://localhost:5000/authorize',
         ## URL_FOR SUCKS AND DOESNT WORK
